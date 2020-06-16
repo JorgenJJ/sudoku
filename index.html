@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sudoku</title>
+    <link rel="stylesheet" type="text/css" href="style/stylesheet.css"></link>
+  </head>
+  <body class="body">
+    <div class="container">
+      <div class="content">
+        <div class="header">
+          <h1 id="title">Sudoku</h1>
+          <div class="divSettings">
+            <div class="divTheme">
+              <input type="radio" id="radioLight" name="radioLight" onchange="updateTheme('light')" value="light">
+              <label for="radioLight">Lyst</label>
+              <input type="radio" id="radioDark" name="radioDark" onchange="updateTheme('dark')" value="dark">
+              <label for="radioDark">Mørkt</label>
+            </div>
+            <div class="divScale">
+              <input type="range" min="2" max="8" value="5" class="slider" id="sliderScale">
+            </div>
+            <div class="divControls">
+              <input type="button" onclick="runGenerator()" id="btnGenerator" value="Generer nytt brett">
+              <input type="button" onclick="runSolver1()" id="btnSolver1" value="Løs med metode 1">
+              <input type="button" onclick="runSolver2()" id="btnSolver2" value="Løs med metode 2">
+              <input type="button" onclick="showProcess()" id="btnProcess" value="Vis prosess">
+            </div>
+          </div>
+        </div>
+        <div class="game">
+          <canvas id="gameCanvas">
+            
+          </canvas>
+        </div>
+        <div class="divLog">
+          <p id="log5" class="logEntry">----</p>
+          <p id="log4" class="logEntry">----</p>
+          <p id="log3" class="logEntry">----</p>
+          <p id="log2" class="logEntry">----</p>
+          <p id="log1" class="logEntry">----</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      
+    </div>
+  </body>
+  <script type="text/javascript" src="js/index.js"></script>
+</html>
